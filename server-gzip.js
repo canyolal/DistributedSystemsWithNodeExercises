@@ -9,6 +9,7 @@ http.createServer((request, response) => {
   const acceptEncoding = request.headers['accept-encoding'] || '';
   response.setHeader('Content-Type', 'text/plain');
   console.log(acceptEncoding);
+  
   if (acceptEncoding.includes('gzip')) {
     console.log('encoding with gzip');
     response.setHeader('Content-Encoding', 'gzip');
